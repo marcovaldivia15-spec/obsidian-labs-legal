@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Hex by Obsidian Labs</title>
+  <meta name="description" content="Privacy Policy for Hex, a Discord AI app owned by Obsidian Labs." />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header>
+    <div class="wrap brand">
+      <h1>Obsidian Labs <span>· Legal</span></h1>
+      <nav>
+        <a href="../">Home</a>
+        <a href="../terms/">Terms</a>
+        <a href="../privacy/">Privacy</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <h2>Privacy Policy</h2>
+    <p class="meta">
+      App: <strong>Hex</strong> · Developer/Owner: <strong>Obsidian Labs</strong><br />
+      Effective date: October 5, 2026 · Last updated: October 5, 2026
+    </p>
+
+    <div class="card">
+      <p>This Privacy Policy explains what <strong>Hex</strong> collects and stores when you use it on Discord, why that happens, who processes data for us, and how you can ask us to delete your stored Hex data.</p>
+      <p><strong>We do not sell your personal data.</strong></p>
+      <p>This policy describes Hex’s <em>current</em> v3.0 behavior. It is written to match how Hex actually works—not aspirational claims.</p>
+    </div>
+
+    <section>
+      <h3>1. Who we are</h3>
+      <p>Hex is owned and operated by <strong>Obsidian Labs</strong>. Contact for privacy and data-deletion requests: <a href="mailto:theobsidianlabs.dev@gmail.com">theobsidianlabs.dev@gmail.com</a>.</p>
+    </section>
+
+    <section>
+      <h3>2. What Hex is</h3>
+      <p>Hex is a Discord bot that can chat, understand images and files you send it, create simple memes/GIFs from uploads using local image tools, remember optional facts, schedule messages, summarize channels (when permitted), and provide moderation assistance (such as forwarding user reports). Hex does not currently offer voice features or paid AI image generation.</p>
+    </section>
+
+    <section>
+      <h3>3. Information Hex processes</h3>
+      <p>Depending on how you use Hex, we may process:</p>
+      <ul>
+        <li><strong>Discord user IDs</strong> (to know who is chatting, whose memories belong to whom, rate limits, creator-only features)</li>
+        <li><strong>Guild / server IDs</strong> (to scope server features and permissions)</li>
+        <li><strong>Channel and message IDs</strong> (when needed for replies, summaries, reports, pins/reacts, schedules, or Actions)</li>
+        <li><strong>Message content you send to Hex</strong>, including:
+          <ul>
+            <li>Direct messages to Hex</li>
+            <li>Mentions / slash commands directed at Hex</li>
+            <li>Messages in Hex’s designated home channel (<code>#hex</code>), where no mention is required</li>
+          </ul>
+        </li>
+        <li><strong>Conversation / thread state</strong> used to keep short-term context for ongoing chats</li>
+        <li><strong>Personal memories</strong> you ask Hex to store about you (private to your user ID)</li>
+        <li><strong>Server memories</strong> that admins/creators save for a guild (shared server context, separate from private memories)</li>
+        <li><strong>Scheduled messages</strong> you ask Hex to send later</li>
+        <li><strong>Moderation reports</strong> you submit (including the reported message link/content context Hex can fetch, your reason, and related IDs) so they can be delivered to a configured mod channel or to the creator via DM</li>
+        <li><strong>Uploaded images and files</strong> when you ask Hex to analyze them, caption/meme/GIF them, or otherwise process them (subject to Hex’s size/type limits)</li>
+        <li><strong>Basic operational metadata</strong> such as timestamps and configuration flags needed to run the bot (for example, whether a home channel ID is set)</li>
+      </ul>
+      <p>Hex generally <strong>does not</strong> intentionally scrape or store every message in a server. Channel history is read when a feature needs it (for example, <code>/summarize</code> or soft channel context) and is bounded by message/character limits. Server members’ messages that are never directed at Hex are not treated as Hex “chat history” for memory.</p>
+    </section>
+
+    <section>
+      <h3>4. Why we process this data</h3>
+      <ul>
+        <li>To provide Hex’s features (replies, memory, schedules, media tools, summaries, reports, Actions)</li>
+        <li>To keep private memories separate from other users</li>
+        <li>To enforce rate limits and creator/admin gates</li>
+        <li>To operate, debug, and maintain the service</li>
+        <li>To respond to privacy/deletion requests you send us</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>5. AI processing (OpenAI)</h3>
+      <p>When Hex needs an AI reply or analysis, relevant content—such as your prompt, recent conversation context, memories Hex retrieves for that request, and images/files you asked it to analyze—may be sent to <strong>OpenAI</strong> for processing.</p>
+      <p>OpenAI processes that content under its own terms and policies. We use OpenAI as a processor to run Hex; we do not use Hex to sell your data.</p>
+    </section>
+
+    <section>
+      <h3>6. Where data is stored</h3>
+      <ul>
+        <li><strong>SQLite database</strong> on Hex’s hosting environment (<strong>Bot-Hosting.net</strong>), used for things like user threads, conversation state, personal memories, server memories, and scheduled messages</li>
+        <li><strong>Production backups</strong> of that database, which may be created before updates/migrations or for operational recovery (for example, pre-deploy and pre-migration copies). Backups are operational copies; they are not a separate “product feature” for browsing your data</li>
+        <li><strong>Host and Discord infrastructure logs</strong> may incidentally include operational messages while Hex runs</li>
+      </ul>
+      <p>Images and files are processed for the request you make. Hex’s design aims to handle media in memory for analysis rather than building a long-term media library, but temporary files, caches, or host-level artifacts can exist during processing. Do not assume permanent encrypted storage of uploads.</p>
+    </section>
+
+    <section>
+      <h3>7. Retention and deletion</h3>
+      <p>Hex currently stores operational data in SQLite for as long as it remains in the production database (and any backups that still exist). <strong>Hex does not currently enforce automatic deletion after a fixed number of days</strong> for memories, conversation state, schedules, or reports.</p>
+      <p>You can remove some data yourself inside Discord using Hex’s commands/phrases where available (for example, forgetting personal memories). Server memories are managed by authorized users in that server.</p>
+      <p><strong>To request deletion of your stored Hex data</strong>, email <a href="mailto:theobsidianlabs.dev@gmail.com">theobsidianlabs.dev@gmail.com</a> from an account you can prove is tied to your Discord identity, and include:</p>
+      <ul>
+        <li>Your Discord username and user ID</li>
+        <li>What you want deleted (for example: personal memories, conversation state, schedules associated with you)</li>
+      </ul>
+      <p>We will work to delete or anonymize your personal Hex records from the live production database. Please note:</p>
+      <ul>
+        <li>Some data may remain temporarily in existing backups until those backups are rotated or replaced</li>
+        <li>Server memories or reports that involve multiple people may be edited rather than fully erased if full deletion would break another user’s legitimate record</li>
+        <li>Content that only exists in Discord (not in Hex’s database) must be managed through Discord</li>
+        <li>OpenAI may retain data according to its own policies for the period they control</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>8. Sharing and third parties</h3>
+      <p>We share data only as needed to run Hex:</p>
+      <ul>
+        <li><strong>Discord</strong> — the platform where Hex runs; message delivery and identity are governed by Discord</li>
+        <li><strong>OpenAI</strong> — AI processing for prompts/context/media you ask Hex to handle</li>
+        <li><strong>Bot-Hosting.net</strong> — hosting for the Hex process and its SQLite database</li>
+      </ul>
+      <p>We may also disclose information if required by law, or to protect the rights, safety, and integrity of users, Hex, or Obsidian Labs.</p>
+      <p><strong>We do not sell personal data.</strong></p>
+    </section>
+
+    <section>
+      <h3>9. Security practices</h3>
+      <p>We take practical steps to protect Hex, including:</p>
+      <ul>
+        <li>Keeping bot tokens and API keys in host environment configuration (not in public legal repos or public source)</li>
+        <li>Restricting creator-only and privileged Actions</li>
+        <li>Rate limiting to reduce abuse</li>
+        <li>Avoiding logging of secret values in Hex’s own application logs where redaction is implemented</li>
+        <li>Separating private user memories from shared server memories in prompts</li>
+      </ul>
+      <p>No method of transmission or storage is perfectly secure. We do <strong>not</strong> claim that all Hex data is encrypted at rest on the host, or that deletion from every backup is instantaneous.</p>
+    </section>
+
+    <section>
+      <h3>10. Children</h3>
+      <p>Hex is intended for users who are allowed to use Discord under Discord’s own age rules. If you believe a minor’s data was stored in Hex contrary to those rules, contact us and we will review deletion.</p>
+    </section>
+
+    <section>
+      <h3>11. Your choices</h3>
+      <ul>
+        <li>Don’t send Hex information you don’t want processed</li>
+        <li>Use forget/memory commands where available</li>
+        <li>Leave servers or stop DMing Hex if you no longer want to interact</li>
+        <li>Email us for a deletion request (Section 7)</li>
+        <li>Server admins can remove Hex from a server at any time</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>12. Changes to this policy</h3>
+      <p>We may update this Privacy Policy as Hex changes. The “Last updated” date will change when we do. Continued use after an update means you acknowledge the revised policy.</p>
+    </section>
+
+    <section>
+      <h3>13. Contact</h3>
+      <p>Privacy questions and data-deletion requests: <a href="mailto:theobsidianlabs.dev@gmail.com">theobsidianlabs.dev@gmail.com</a></p>
+      <p>Also see our <a href="../terms/">Terms of Service</a>.</p>
+    </section>
+  </main>
+  <footer class="wrap">
+    © 2026 Obsidian Labs · <a href="../terms/">Terms of Service</a>
+  </footer>
+</body>
+</html>
